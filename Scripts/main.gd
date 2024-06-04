@@ -2,13 +2,9 @@ extends Node
 
 func _ready():
 	var players = {
-		"Crook": 1, 
-		"Villain": 35, 
-		"Boss": 100
+		"Crook": 	{"level": 1, "health": 80}, 
+		"Villain": 	{"level": 35, "health": 150}, 
+		"Boss": 	{"level": 100, "health": 500},
 	}
 	
-	players["Villain"] = 50
-	players["Dwayne (The Rock) Johnson"] = 999
-	
-	for username in players:
-		print(username + ": " + str(players[username]))
+	print(players["Boss"]["health"])
