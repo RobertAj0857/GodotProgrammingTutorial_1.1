@@ -1,10 +1,11 @@
 extends Node
 
 func _ready():
-	add(3, 8)
-	add(245, 111)
+	var result = add(3, 5)
+	result = add(result, 10)
+	print(result)
 
 
 func add(num1, num2):
 	var result = num1 + num2
-	print(result)
+	return result
