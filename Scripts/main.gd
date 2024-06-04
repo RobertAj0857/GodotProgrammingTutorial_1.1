@@ -1,6 +1,6 @@
 extends Node
 
-@export var damage := 15
+const GRAVITY = -9.81
 
 func _ready():
-	print(damage)
+	pass
