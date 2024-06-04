@@ -1,8 +1,10 @@
 extends Node
 
-func _input(event):
-	if event.is_action_pressed("MyAction"):
-		jump()
+func _ready():
+	add(3, 8)
+	add(245, 111)
 
-func jump():
-	print("JUMP!")
+
+func add(num1, num2):
+	var result = num1 + num2
+	print(result)
