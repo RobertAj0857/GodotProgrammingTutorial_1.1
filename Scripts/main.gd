@@ -2,5 +2,6 @@ extends Node
 
 
 func _ready():
-	var pi = 3.14
-	print(int(pi))
+	var position = Vector3(3, -10, 5)
+	position.x += 2
+	print(position)
