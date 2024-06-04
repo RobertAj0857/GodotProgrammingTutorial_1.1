@@ -1,6 +1,8 @@
 extends Node
 
-const GRAVITY = -9.81
+func _input(event):
+	if event.is_action_pressed("MyAction"):
+		jump()
 
-func _ready():
-	pass
+func jump():
+	print("JUMP!")
