@@ -1,6 +1,7 @@
 extends Node
 
-@onready var weapon = get_node("Player/Weapon")
+@export var my_node: Node
 
 func _ready():
-	print(weapon.get_path())
+	if my_node is Node2D:
+		print("Is 2D!")
