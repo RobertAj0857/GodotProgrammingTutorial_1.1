@@ -1,10 +1,11 @@
 extends Node
 
+enum Alignment { ALLY, NEUTRAL, ENEMY }
+
+@export var unit_alignment = Alignment.ALLY
+
 func _ready():
-	var players = {
-		"Crook": 	{"level": 1, "health": 80}, 
-		"Villain": 	{"level": 35, "health": 150}, 
-		"Boss": 	{"level": 100, "health": 500},
-	}
-	
-	print(players["Boss"]["health"])
+	if unit_alignment == Alignment.ENEMY:
+		print("You are not welcome here.")
+	else:
+		print("Welcome!")

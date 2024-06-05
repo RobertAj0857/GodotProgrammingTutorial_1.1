@@ -4,6 +4,7 @@
 
 [node name="Main" type="Node"]
 script = ExtResource("1_y8xy2")
+unit_alignment = 2
 
 [node name="Label" type="Label" parent="."]
 offset_right = 507.0
