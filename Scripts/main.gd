@@ -1,16 +1,6 @@
 extends Node
 
-enum Alignment { ALLY, NEUTRAL, ENEMY }
-
-@export var my_alignment: Alignment
+@onready var weapon = get_node("Player/Weapon")
 
 func _ready():
-	match my_alignment:
-		Alignment.ALLY:
-			print("Hello, friend!")
-		Alignment.NEUTRAL:
-			print("I come in peace")
-		Alignment.ENEMY:
-			print("TASTE MY WRATH!")
-		_:
-			print("Who art thou??")
+	print(weapon.get_path())

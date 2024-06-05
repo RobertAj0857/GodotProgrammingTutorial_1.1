@@ -4,12 +4,11 @@
 
 [node name="Main" type="Node"]
 script = ExtResource("1_y8xy2")
-my_alignment = 2
 
-[node name="Label" type="Label" parent="."]
-offset_right = 507.0
-offset_bottom = 50.0
-theme_override_font_sizes/font_size = 50
-text = "This Is a Label"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Player" type="Node" parent="."]
+
+[node name="Graphics" type="Node" parent="Player"]
+
+[node name="Weapon" type="Node" parent="Player"]
+
+[node name="Enemy" type="Node" parent="."]
