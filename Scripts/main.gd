@@ -1,13 +1,6 @@
 extends Node
 
-var chance := 0.2
-var chance_pct: int:
-	get:
-		return chance * 100
-	set(value):
-		chance = float(value) / 100
+@export var character_to_kill: Character
 
 func _ready():
-	print(chance_pct)
-	chance_pct = 40
-	print(chance_pct)
+	character_to_kill.die()
