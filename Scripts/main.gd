@@ -1,19 +1,15 @@
 extends Node
 
-signal leveled_up(msg)
+signal health_changed(new_health)
 
-var xp := 0
+var health := 100:
+	set(value):
+		health = clamp(value, 0, 100)
+		health_changed.emit(health)
 
 func _ready():
-	leveled_up.connect(_on_leveled_up)
-
-func _on_timer_timeout():
-	xp += 5
-	print(xp)
-	if xp >= 20:
-		xp = 0
-		leveled_up.emit("RATS")
+	health = -150
 
 
-func _on_leveled_up(msg):
-	print(msg)
+func _on_health_changed(new_health):
+	print(new_health)
