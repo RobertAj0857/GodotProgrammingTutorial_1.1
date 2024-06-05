@@ -1,15 +1,13 @@
 extends Node
 
-signal health_changed(new_health)
-
-var health := 100:
+var chance := 0.2
+var chance_pct: int:
+	get:
+		return chance * 100
 	set(value):
-		health = clamp(value, 0, 100)
-		health_changed.emit(health)
+		chance = float(value) / 100
 
 func _ready():
-	health = -150
-
-
-func _on_health_changed(new_health):
-	print(new_health)
+	print(chance_pct)
+	chance_pct = 40
+	print(chance_pct)
