@@ -1,8 +1,16 @@
 extends Node
 
-enum Alignment { ALLY = 1, NEUTRAL = 0, ENEMY = -1 }
+enum Alignment { ALLY, NEUTRAL, ENEMY }
 
-@export var unit_alignment = Alignment.ALLY
+@export var my_alignment: Alignment
 
 func _ready():
-	print(Alignment.ENEMY)
+	match my_alignment:
+		Alignment.ALLY:
+			print("Hello, friend!")
+		Alignment.NEUTRAL:
+			print("I come in peace")
+		Alignment.ENEMY:
+			print("TASTE MY WRATH!")
+		_:
+			print("Who art thou??")
