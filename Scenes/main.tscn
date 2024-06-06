@@ -1,16 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://hcvaqueasagf"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_y8xy2"]
-[ext_resource type="Script" path="res://Scripts/Character.gd" id="2_m8usc"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="2_qpj4m"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_y8xy2")
 
-[node name="Character" type="Node" parent="."]
-script = ExtResource("2_m8usc")
-
-[node name="Character2" type="Node" parent="."]
-script = ExtResource("2_m8usc")
-
-[node name="Character3" type="Node" parent="."]
-script = ExtResource("2_m8usc")
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_qpj4m")
